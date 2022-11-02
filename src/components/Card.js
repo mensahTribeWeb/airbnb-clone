@@ -1,20 +1,20 @@
 import React from "react";
-import cardImg from "../img/katie.png";
+// import cardImg from "`../img/${props.img}`";
 import redStar from "../img/angry.png";
 
-export default function Card () {
+export default function Card (props) {
   return (
 
     <div className="card">
-      <img className="card--img" src={cardImg} alt="katie zaferes" />
+      <img src={`../img/${props.img}`} alt="" className="card--img" />
       <div className="card--stats">
         <img className="star" src={redStar} alt="star" />
-        <span className="card--stats--percent">5.0</span>
-        <span className="card--stats--count gray">(6) ◾ </span>
-        <span className="card--stats--location gray">USA</span>
+        <span className="card--stats--percent">{props.rating}</span>
+        <span className="card--stats--count gray">{props.reviewCount} ◾ </span>
+        <span className="card--stats--location gray">{props.country}</span>
       </div>
-      <p className="card--quote">Life lessons with Katie Zaferes</p>
-      <p className="card--price"><strong>From $136</strong> / person</p>
+      <p className="card--quote">{props.title}</p>
+      <p className="card--price"><strong>From ${props.price}</strong> / person</p>
 
     </div>
 
