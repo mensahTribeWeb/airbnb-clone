@@ -24,9 +24,9 @@ return(
       <div className="App">
       <NavBar/>
       <Hero/>
-      <div className="cards-list">      
+      <section className="cards-list">      
        {cards}
-      </div>
+      </section>
     </div>
 )
 }
